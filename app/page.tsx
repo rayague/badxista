@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useScroll,
@@ -35,24 +35,43 @@ const cardVariants = {
   },
 };
 
-// -----------------------------------------------------------------------------
-// Section Héros : Effet parallaxe vidéo + titre + boutons
-// -----------------------------------------------------------------------------
 const HeroSection = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
+
+  // Détecte si on est sur mobile (width < 768px)
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // Scroll progress sur le ref
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
-  // Translation et échelle selon le scroll
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+
+  // Parallax désactivé sur mobile
+  const rawY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const rawScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+
+  // Mouvements plus fluides
+  const y = useSpring(rawY, { stiffness: 50, damping: 20 });
+  const scale = useSpring(rawScale, { stiffness: 50, damping: 20 });
 
   return (
-    <section ref={ref} className="relative h-[200vh] mb-24">
+    <section
+      ref={ref}
+      className="relative mb-24
+        h-screen           /* 100vh par défaut */
+        md:h-[200vh]       /* 200vh sur md+ */
+        overflow-hidden"
+    >
       <motion.div
-        style={{ y, scale }}
-        className="sticky top-0 h-screen w-full overflow-hidden"
+        style={isMobile ? {} /* pas de transform sur mobile */ : { y, scale }}
+        className="sticky top-0 h-screen w-full"
       >
         {/* Voile sombre */}
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -72,16 +91,17 @@ const HeroSection = () => {
 
         {/* Contenu central */}
         <motion.div
-          className="relative z-20 h-full flex items-center justify-center text-center px-4"
+          className="relative z-20 h-full flex items-center justify-center text-center px-4 sm:px-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <motion.h1
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-7xl font-bold mb-8 text-white"
+              className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-white leading-tight"
             >
               <span className="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
                 Révolutionnez
@@ -92,7 +112,8 @@ const HeroSection = () => {
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="flex flex-wrap justify-center gap-4"
+              transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
+              className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6"
             >
               {["Streetwear", "Glamwear", "Glow Routine"].map((name, i) => (
                 <Link
@@ -102,7 +123,7 @@ const HeroSection = () => {
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="px-4 py-2 md:px-6 md:py-3 bg-white/10 backdrop-blur-sm rounded-full text-white border border-white/20 hover:bg-white/20 transition-all cursor-pointer text-sm md:text-base"
+                    className="px-3 py-2 sm:px-5 sm:py-3 bg-white/10 backdrop-blur-sm rounded-full text-white border border-white/20 hover:bg-white/20 transition-all cursor-pointer text-sm sm:text-base"
                     role="button"
                     tabIndex={0}
                   >

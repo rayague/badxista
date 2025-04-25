@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { ShieldCheck, Flame, Users } from "lucide-react";
-
+import Head from "next/head";
 // Fonts
 const geistSans = Geist({
   subsets: ["latin"],
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.badxista.com",
+    url: "https://badxista.vercel.app/",
     siteName: "BADXISTA",
     images: [
       {
@@ -131,6 +131,54 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="scroll-smooth">
+      <Head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/globe.svg" />
+        <meta
+          name="description"
+          content="BADXISTA – Découvrez les looks Bad Girl viraux TikTok : streetwear oversize, glamwear scintillant et routines glow-up. Livraison express, paiement sécurisé, avis 5⭐."
+        />
+        <meta
+          name="keywords"
+          content="bad girl, streetwear, glamwear, fashion 2024, tendance femme, outfit TikTok, tenues virales, looks stylés, tenues soirée, pack vêtements, glow routine, parfum femme, tenues chic, looks bad girl, total look, tenues pas chères, vêtements femme tendance, style urbaine, habits glam, tenues d'été, vêtements AR, robe strass, talons glam, sac banane tendance, legging sculptant, routine beauté, idée tenue, influenceuse style, tenues comfy, chill vibes, jogging femme, mode TikTok, idées de look, tenues AR, vêtements Amazon, Amazon fashion, pack prêt à commander, tenues 2024, mode ado fille, habits de soirée, mode pas chère, look Instagram, looks sexy, mode jeune femme, habits viraux, tenues casual, mode comfy chic, looks stylés Amazon, style glow up, look transformation, parfum sucré, outfit festival, outfit street chic, tenue jour/nuit, style transformation, Amazon tendance, collection femme, mode lookbook, tenues TikTok girl, style TikTok, Amazon wishlist"
+        />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:site_name" content="BADXISTA" />
+        <meta
+          property="og:title"
+          content="BADXISTA | Looks Bad Girl TikTok – Streetwear, Glamwear & Glow-Up"
+        />
+        <meta
+          property="og:description"
+          content="Plongez dans l’univers BADXISTA : tenues oversize, paillettes et routines beauté glow-up. Livraison rapide et avis 5 étoiles !"
+        />
+        <meta
+          property="og:image"
+          content="https://badxista.vercel.app/og-image.jpg"
+        />
+        <meta property="og:url" content="https://badxista.vercel.app/" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@badxista" />
+        <meta
+          name="twitter:title"
+          content="BADXISTA | Streetwear, Glamwear & Glow-Up TikTok"
+        />
+        <meta
+          name="twitter:description"
+          content="BADXISTA – Tes looks Bad Girl préférés sur TikTok : packs mode, routines beauté & accessoires tendances. 🚀"
+        />
+        <meta
+          name="twitter:image"
+          content="https://badxista.vercel.app/og-image.jpg"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ec4899" />
+      </Head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-black text-gray-100 antialiased`}
       >
