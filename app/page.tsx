@@ -7,7 +7,6 @@ import {
   useTransform,
   useSpring,
   useInView,
-  AnimatePresence,
 } from "framer-motion";
 import {
   ChevronRight,
@@ -22,7 +21,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-// Configuration commune des animations
+// Variants communs pour les animations des cartes
 const cardVariants = {
   offscreen: { y: 50, opacity: 0 },
   onscreen: {
@@ -36,23 +35,29 @@ const cardVariants = {
   },
 };
 
+// -----------------------------------------------------------------------------
+// Section Héros : Effet parallaxe vidéo + titre + boutons
+// -----------------------------------------------------------------------------
 const HeroSection = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
-
+  // Translation et échelle selon le scroll
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
-    <section ref={ref} className="relative h-[200vh]">
+    <section ref={ref} className="relative h-[200vh] mb-24">
       <motion.div
         style={{ y, scale }}
         className="sticky top-0 h-screen w-full overflow-hidden"
       >
+        {/* Voile sombre */}
         <div className="absolute inset-0 bg-black/40 z-10" />
+
+        {/* Vidéo d'arrière-plan */}
         <motion.video
           autoPlay
           muted
@@ -65,6 +70,7 @@ const HeroSection = () => {
           <source src="/files/picture6.mp4" type="video/mp4" />
         </motion.video>
 
+        {/* Contenu central */}
         <motion.div
           className="relative z-20 h-full flex items-center justify-center text-center px-4"
           initial={{ opacity: 0 }}
@@ -88,11 +94,7 @@ const HeroSection = () => {
               animate={{ scale: 1 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              {[
-                "Streetwear Bad Girl",
-                "Soirée Séduction / Glamwear",
-                "Glow Routine & Parfums Pré-Soirée",
-              ].map((name, i) => (
+              {["Streetwear", "Glamwear", "Glow Routine"].map((name, i) => (
                 <Link
                   href={`/${name.toLowerCase().replace(/ /g, "-")}`}
                   key={i}
@@ -116,12 +118,15 @@ const HeroSection = () => {
   );
 };
 
+// -----------------------------------------------------------------------------
+// Section Stratégie : Carte d'avantages avec apparition au scroll
+// -----------------------------------------------------------------------------
 const StrategySection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px", once: true });
 
   return (
-    <section className="py-20 px-4 bg-black">
+    <section className="py-20 px-4 bg-black mb-24">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -164,20 +169,22 @@ const StrategySection = () => {
   );
 };
 
+// -----------------------------------------------------------------------------
+// Section Galerie Produits : Effet sticky (toujours claire)
+// -----------------------------------------------------------------------------
 const ProductGallery = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
+  // Seule la translation change, plus de fade-out
   const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-[150vh] py-20 bg-black">
+    <section ref={ref} className="relative min-h-[150vh] py-20 bg-black mb-24">
       <motion.div
-        style={{ y, opacity }}
+        style={{ y }}
         className="sticky top-20 space-y-20 px-4 max-w-7xl mx-auto"
       >
         {[
@@ -189,57 +196,25 @@ const ProductGallery = () => {
               {
                 name: "Baskers Oversized",
                 price: "89€",
-                image: "/streetwear-shoes.jpg",
+                image: "/files/streetwear-shoes.jpg",
                 link: "#",
               },
               {
                 name: "Ceinture Chaînes Métal",
                 price: "45€",
-                image: "/chain-belt.jpg",
+                image: "/files/chain-belt.jpg",
                 link: "#",
               },
               {
                 name: "Veste Cargo Noire",
                 price: "109€",
-                image: "/cargo-jacket.jpg",
+                image: "/files/cargo-jacket.jpg",
                 link: "#",
               },
               {
                 name: "Pantalon Large à Poches",
                 price: "69€",
-                image: "/wide-pants.jpg",
-                link: "#",
-              },
-            ],
-          },
-          {
-            title: "Glamour Nocturne",
-            description:
-              "Brille toute la nuit avec des pièces sensuelles, sophistiquées et résolument puissantes.",
-
-            items: [
-              {
-                name: "Robe Moulante Strass",
-                price: "129€",
-                image: "/sparkly-dress.jpg",
-                link: "#",
-              },
-              {
-                name: "Chaussures à Talons Cristaux",
-                price: "159€",
-                image: "/crystal-heels.jpg",
-                link: "#",
-              },
-              {
-                name: "Clutch Métallisée",
-                price: "79€",
-                image: "/metallic-clutch.jpg",
-                link: "#",
-              },
-              {
-                name: "Boucles d'Oreilles Chandelier",
-                price: "39€",
-                image: "/chandelier-earrings.jpg",
+                image: "/files/wide-pants.jpg",
                 link: "#",
               },
             ],
@@ -252,25 +227,25 @@ const ProductGallery = () => {
               {
                 name: "Highlighter Liquide Ultra Glow",
                 price: "35€",
-                image: "/liquid-highlighter.jpg",
+                image: "/files/liquid-highlighter.jpg",
                 link: "#",
               },
               {
                 name: "Brume Corporelle Pailletée",
                 price: "42€",
-                image: "/shimmer-body-spray.jpg",
+                image: "/files/shimmer-body-spray.jpg",
                 link: "#",
               },
               {
                 name: "Parfum Sensuel Ambre & Vanille",
                 price: "89€",
-                image: "/amber-perfume.jpg",
+                image: "/files/picture2.jpg",
                 link: "#",
               },
               {
                 name: "Kit Skincare Éclat Intense",
                 price: "59€",
-                image: "/glow-skincare-kit.jpg",
+                image: "/files/glow-skincare-kit.jpg",
                 link: "#",
               },
             ],
@@ -281,16 +256,15 @@ const ProductGallery = () => {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.2 }}
+            variants={cardVariants}
             className="space-y-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
               {collection.title}
             </h2>
-
             <p className="text-gray-300 text-lg text-center mb-6">
               {collection.description}
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {collection.items.map((item, i) => (
                 <motion.div
@@ -307,7 +281,6 @@ const ProductGallery = () => {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {item.name}
@@ -342,13 +315,16 @@ const ProductGallery = () => {
   );
 };
 
+// -----------------------------------------------------------------------------
+// Section Packs Produits : Liste complète des 6 packs
+// -----------------------------------------------------------------------------
 const ProductPacks = () => {
   const packs = [
     {
       title: "COLLECTION JOUR – BAD GIRL STREET",
-      image: "/packs/day-badgirl.jpg",
+      image: "/files/packs/day-badgirl.jpg",
       items: [
-        "Jean cargo beige / noir (40€)",
+        "Jean cargo beige/noir (40€)",
         "Top court 'cut' blanc ou noir (25€)",
         "Basket blanche clean (60€)",
         "Casquette brodée street (20€)",
@@ -363,24 +339,23 @@ const ProductPacks = () => {
     },
     {
       title: "COLLECTION NUIT – DIVA SÉDUCTRICE",
-      image: "/packs/night-diva.jpg",
+      image: "/files/packs/night-diva.jpg",
       items: [
-        "Robe nude sculptante (50€)",
+        "Robe moulante strass (50€)",
         "Talons transparents à strass (45€)",
-        "Pochette dorée ou noire (20€)",
+        "Pochette dorée/noire (20€)",
         "Brume corporelle sucrée (25€)",
       ],
       price: "129€",
       value: "160€",
       saving: "~80€",
       link: "https://www.amazon.fr/hz/wishlist/ls/1NIGHTPACKEXEMPLE?tag=tonaffid",
-      description:
-        "Élégance et glamour, ce pack est fait pour briller lors de tes soirées les plus mémorables.",
+      description: "Élégance et glamour pour tes soirées les plus mémorables.",
       buttonText: "Voir plus",
     },
     {
       title: "COLLECTION SPORTY – GYM & GLOW",
-      image: "/packs/sporty-glow.jpg",
+      image: "/files/packs/sporty-glow.jpg",
       items: [
         "Legging taille haute sculptant (35€)",
         "Brassière assortie (25€)",
@@ -392,14 +367,14 @@ const ProductPacks = () => {
       saving: "~60€",
       link: "https://www.amazon.fr/hz/wishlist/ls/1GYMPACKEXEMPLE?tag=tonaffid",
       description:
-        "Pour un look sportif et tendance, ce pack allie confort et style pour ton entraînement et au-delà.",
+        "Un look sportif et tendance pour ton entraînement et au-delà.",
       buttonText: "Voir plus",
     },
     {
       title: "COLLECTION FESTIVAL – BOHO VIBES",
-      image: "/packs/boho-festival.jpg",
+      image: "/files/packs/boho-festival.jpg",
       items: [
-        "Robe crochet / franges (40€)",
+        "Robe crochet/franges (40€)",
         "Lunettes teintées rétro (20€)",
         "Sandales plates stylées (35€)",
         "Sac banane bohème (25€)",
@@ -409,12 +384,12 @@ const ProductPacks = () => {
       saving: "~70€",
       link: "https://www.amazon.fr/hz/wishlist/ls/1BOHOPACKEXEMPLE?tag=tonaffid",
       description:
-        "Le pack idéal pour un festival ou une journée décontractée avec un style bohème chic.",
+        "Le pack idéal pour un festival ou une journée décontractée.",
       buttonText: "Voir plus",
     },
     {
       title: "COLLECTION CHILL – SUNDAY COMFY",
-      image: "/packs/sunday-comfy.jpg",
+      image: "/files/packs/sunday-comfy.jpg",
       items: [
         "Jogging molletonné beige (30€)",
         "Sweat crop loose assorti (30€)",
@@ -425,13 +400,12 @@ const ProductPacks = () => {
       value: "110€",
       saving: "~45€",
       link: "https://www.amazon.fr/hz/wishlist/ls/1CHILLPACKEXEMPLE?tag=tonaffid",
-      description:
-        "Idéal pour une journée chill à la maison. Confort et détente à prix doux.",
+      description: "Confort et détente à la maison.",
       buttonText: "Voir plus",
     },
     {
       title: "COLLECTION DATE – FÉMININE & CHIC",
-      image: "/packs/date-chic.jpg",
+      image: "/files/packs/date-chic.jpg",
       items: [
         "Robe cache-cœur fluide (45€)",
         "Talons fins nude (40€)",
@@ -442,14 +416,13 @@ const ProductPacks = () => {
       value: "140€",
       saving: "~60€",
       link: "https://www.amazon.fr/hz/wishlist/ls/1DATEPACKEXEMPLE?tag=tonaffid",
-      description:
-        "Le pack parfait pour un look chic et féminin lors de ta prochaine sortie ou rendez-vous.",
+      description: "Le pack parfait pour un look chic et féminin.",
       buttonText: "Voir plus",
     },
   ];
 
   return (
-    <section className="py-32 mt-24 px-4 relative bg-black">
+    <section className="py-32 px-4 mb-24 bg-black">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}
@@ -458,7 +431,6 @@ const ProductPacks = () => {
         >
           ✨ Packs prêts à commander
         </motion.h2>
-
         <div className="grid md:grid-cols-3 gap-8">
           {packs.map((pack, i) => (
             <motion.div
@@ -468,9 +440,11 @@ const ProductPacks = () => {
               viewport={{ once: true }}
               className="p-8 bg-gradient-to-b from-white/5 to-transparent rounded-2xl border border-white/10"
             >
-              <img
+              <Image
                 src={pack.image}
                 alt={pack.title}
+                width={500}
+                height={500}
                 className="w-full h-60 object-cover rounded-md mb-6"
               />
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -478,8 +452,8 @@ const ProductPacks = () => {
               </h3>
               <p className="text-gray-300 mb-4">{pack.description}</p>
               <ul className="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4">
-                {pack.items.map((item, index) => (
-                  <li key={index}>{item}</li>
+                {pack.items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
                 ))}
               </ul>
               <div className="text-pink-400 font-semibold text-lg">
@@ -507,14 +481,16 @@ const ProductPacks = () => {
   );
 };
 
-// Les autres sections (Pricing, Contact) restent similaires avec les mêmes optimisations
-
+// -----------------------------------------------------------------------------
+// Composant principal : Barre de progression + sections + footer
+// -----------------------------------------------------------------------------
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   return (
     <main className="relative bg-black">
+      {/* Barre de progression */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-white/20 z-50"
         style={{ scaleX }}
@@ -525,16 +501,16 @@ export default function Home() {
         />
       </motion.div>
 
+      {/* Sections */}
       <HeroSection />
       <StrategySection />
       <ProductGallery />
       <ProductPacks />
 
-      {/* Ajouter les autres sections ici avec la même structure */}
-
+      {/* Footer */}
       <footer className="bg-gradient-to-b from-black via-black to-[#0f0c29] text-white px-6 py-20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-          {/* Bloc 1 : Newsletter */}
+          {/* Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -546,9 +522,8 @@ export default function Home() {
               Reçois nos offres secrètes, sélections limitées et pépites avant
               tout le monde. Zéro spam. Juste des looks 🔥.
             </p>
-
             <form
-              action="https://systeme.io/ton-formulaire" // ← Change ici par ton vrai lien System.io
+              action="https://systeme.io/ton-formulaire"
               method="POST"
               target="_blank"
               className="flex flex-col sm:flex-row gap-4 w-full"
@@ -569,7 +544,7 @@ export default function Home() {
             </form>
           </motion.div>
 
-          {/* Bloc 2 : Stratégie de conversion */}
+          {/* Stratégie de conversion */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, y: 40 }}
@@ -586,7 +561,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
             <div className="flex items-start gap-4">
               <Flame className="w-7 h-7 text-orange-400 mt-1" />
               <div>
@@ -597,7 +571,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
             <div className="flex items-start gap-4">
               <Users className="w-7 h-7 text-purple-400 mt-1" />
               <div>
@@ -610,7 +583,6 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-
         {/* Copyright */}
         <div className="mt-16 text-center text-gray-500 text-sm">
           © {new Date().getFullYear()} TonNomDeMarque. Tous droits réservés.
