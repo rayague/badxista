@@ -170,146 +170,285 @@ const StrategySection = () => {
 };
 
 // -----------------------------------------------------------------------------
-// Section Galerie Produits : Effet sticky (toujours claire)
+// Section Streetwear Urbain : toujours claire, sticky
 // -----------------------------------------------------------------------------
-const ProductGallery = () => {
-  const ref = useRef(null);
+const StreetwearSection = () => {
+  const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-  // Seule la translation change, plus de fade-out
   const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
 
+  const collection = {
+    title: "Streetwear Urbain",
+    description:
+      "Une sélection urbaine affirmée, pour imposer ton flow dans les rues comme sur les réseaux.",
+    items: [
+      {
+        name: "Baskers Oversized",
+        price: "89€",
+        image: "/files/picture18.jpg",
+        link: "#",
+      },
+      {
+        name: "Ceinture Chaînes Métal",
+        price: "45€",
+        image: "/files/picture19.jpg",
+        link: "#",
+      },
+      {
+        name: "Veste Cargo Noire",
+        price: "109€",
+        image: "/files/picture20.jpg",
+        link: "#",
+      },
+      {
+        name: "Pantalon Large à Poches",
+        price: "69€",
+        image: "/files/picture21.jpg",
+        link: "#",
+      },
+    ],
+  };
+
   return (
-    <section ref={ref} className="relative min-h-[150vh] py-20 bg-black mb-24">
+    <section ref={ref} className="relative min-h-[100vh] py-20 bg-black mb-24">
       <motion.div
         style={{ y }}
-        className="sticky top-20 space-y-20 px-4 max-w-7xl mx-auto"
+        className="sticky top-20 space-y-12 px-4 max-w-7xl mx-auto"
       >
-        {[
-          {
-            title: "Streetwear Urbain",
-            description:
-              "Une sélection urbaine affirmée, pour imposer ton flow dans les rues comme sur les réseaux.",
-            items: [
-              {
-                name: "Baskers Oversized",
-                price: "89€",
-                image: "/files/streetwear-shoes.jpg",
-                link: "#",
-              },
-              {
-                name: "Ceinture Chaînes Métal",
-                price: "45€",
-                image: "/files/chain-belt.jpg",
-                link: "#",
-              },
-              {
-                name: "Veste Cargo Noire",
-                price: "109€",
-                image: "/files/cargo-jacket.jpg",
-                link: "#",
-              },
-              {
-                name: "Pantalon Large à Poches",
-                price: "69€",
-                image: "/files/wide-pants.jpg",
-                link: "#",
-              },
-            ],
-          },
-          {
-            title: "Glow Routine & Parfums Pré-Soirée",
-            description:
-              "Ta préparation rituelle pour rayonner. Glow, senteurs & soins irrésistibles pour la mise en lumière.",
-            items: [
-              {
-                name: "Highlighter Liquide Ultra Glow",
-                price: "35€",
-                image: "/files/liquid-highlighter.jpg",
-                link: "#",
-              },
-              {
-                name: "Brume Corporelle Pailletée",
-                price: "42€",
-                image: "/files/shimmer-body-spray.jpg",
-                link: "#",
-              },
-              {
-                name: "Parfum Sensuel Ambre & Vanille",
-                price: "89€",
-                image: "/files/picture2.jpg",
-                link: "#",
-              },
-              {
-                name: "Kit Skincare Éclat Intense",
-                price: "59€",
-                image: "/files/glow-skincare-kit.jpg",
-                link: "#",
-              },
-            ],
-          },
-        ].map((collection, index) => (
-          <motion.div
-            key={index}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={cardVariants}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
-              {collection.title}
-            </h2>
-            <p className="text-gray-300 text-lg text-center mb-6">
-              {collection.description}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {collection.items.map((item, i) => (
-                <motion.div
-                  key={i}
-                  variants={cardVariants}
-                  className="relative group overflow-hidden rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"
-                >
-                  <div className="relative h-80">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {item.name}
-                    </h3>
-                    <div className="flex justify-between items-center">
-                      <span className="text-pink-400 font-bold">
-                        {item.price}
-                      </span>
-                      <a
-                        href={item.link}
-                        className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm hover:bg-pink-600 transition-colors"
-                      >
-                        Voir sur Amazon
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <a
-                href="#"
-                className="inline-block px-6 py-3 bg-pink-500 text-white rounded-full font-semibold hover:bg-pink-600 transition"
-              >
-                Voir plus de {collection.title}
-              </a>
-            </div>
-          </motion.div>
-        ))}
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+          {collection.title}
+        </h2>
+        <p className="text-gray-300 text-lg text-center mb-6">
+          {collection.description}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {collection.items.map((item, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative group overflow-hidden rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <div className="relative h-80">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {item.name}
+                </h3>
+                <div className="flex justify-between items-center">
+                  <span className="text-pink-400 font-bold">{item.price}</span>
+                  <a
+                    href={item.link}
+                    className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm hover:bg-pink-600 transition-colors"
+                  >
+                    Voir sur Amazon
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+// -----------------------------------------------------------------------------
+// Section Glamour Nocturne : même principe que Streetwear
+// -----------------------------------------------------------------------------
+const GlamourSection = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
+
+  const collection = {
+    title: "Glamour Nocturne",
+    description:
+      "Brille toute la nuit avec des pièces sensuelles, sophistiquées et résolument puissantes.",
+    items: [
+      {
+        name: "Robe Moulante Strass",
+        price: "129€",
+        image: "/files/picture22.jpg",
+        link: "#",
+      },
+      {
+        name: "Chaussures Cristal",
+        price: "159€",
+        image: "/files/picture23.jpg",
+        link: "#",
+      },
+      {
+        name: "Clutch Métallisée",
+        price: "79€",
+        image: "/files/picture24.jpg",
+        link: "#",
+      },
+      {
+        name: "Boucles Chandelier",
+        price: "39€",
+        image: "/files/picture25.jpg",
+        link: "#",
+      },
+    ],
+  };
+
+  return (
+    <section ref={ref} className="relative min-h-[100vh] py-20 bg-black mb-24">
+      <motion.div
+        style={{ y }}
+        className="sticky top-20 space-y-12 px-4 max-w-7xl mx-auto"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+          {collection.title}
+        </h2>
+        <p className="text-gray-300 text-lg text-center mb-6">
+          {collection.description}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {collection.items.map((item, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative group overflow-hidden rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <div className="relative h-80">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {item.name}
+                </h3>
+                <div className="flex justify-between items-center">
+                  <span className="text-pink-400 font-bold">{item.price}</span>
+                  <a
+                    href={item.link}
+                    className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm hover:bg-pink-600 transition-colors"
+                  >
+                    Voir sur Amazon
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+// -----------------------------------------------------------------------------
+// Section Glow Routine & Parfums Pré-Soirée : idem
+// -----------------------------------------------------------------------------
+const GlowRoutineSection = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
+
+  const collection = {
+    title: "Glow Routine & Parfums Pré-Soirée",
+    description:
+      "Ta préparation rituelle pour rayonner. Glow, senteurs & soins irrésistibles pour la mise en lumière.",
+    items: [
+      {
+        name: "Highlighter Ultra Glow",
+        price: "35€",
+        image: "/files/picture26.jpg",
+        link: "#",
+      },
+      {
+        name: "Brume Pailletée",
+        price: "42€",
+        image: "/files/picture27.jpg",
+        link: "#",
+      },
+      {
+        name: "Parfum Ambre & Vanille",
+        price: "89€",
+        image: "/files/picture28.jpg",
+        link: "#",
+      },
+      {
+        name: "Kit Pré-Glow Intense",
+        price: "59€",
+        image: "/files/picture29.jpg",
+        link: "#",
+      },
+    ],
+  };
+
+  return (
+    <section ref={ref} className="relative min-h-[100vh] py-20 bg-black mb-24">
+      <motion.div
+        style={{ y }}
+        className="sticky top-20 space-y-12 px-4 max-w-7xl mx-auto"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+          {collection.title}
+        </h2>
+        <p className="text-gray-300 text-lg text-center mb-6">
+          {collection.description}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {collection.items.map((item, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative group overflow-hidden rounded-2xl bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <div className="relative h-80">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {item.name}
+                </h3>
+                <div className="flex justify-between items-center">
+                  <span className="text-pink-400 font-bold">{item.price}</span>
+                  <a
+                    href={item.link}
+                    className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm hover:bg-pink-600 transition-colors"
+                  >
+                    Voir sur Amazon
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </section>
   );
@@ -322,7 +461,7 @@ const ProductPacks = () => {
   const packs = [
     {
       title: "COLLECTION JOUR – BAD GIRL STREET",
-      image: "/files/packs/day-badgirl.jpg",
+      image: "/files/picture17.jpg",
       items: [
         "Jean cargo beige/noir (40€)",
         "Top court 'cut' blanc ou noir (25€)",
@@ -339,7 +478,7 @@ const ProductPacks = () => {
     },
     {
       title: "COLLECTION NUIT – DIVA SÉDUCTRICE",
-      image: "/files/packs/night-diva.jpg",
+      image: "/files/picture14.jpg",
       items: [
         "Robe moulante strass (50€)",
         "Talons transparents à strass (45€)",
@@ -355,7 +494,7 @@ const ProductPacks = () => {
     },
     {
       title: "COLLECTION SPORTY – GYM & GLOW",
-      image: "/files/packs/sporty-glow.jpg",
+      image: "/files/picture15.jpg",
       items: [
         "Legging taille haute sculptant (35€)",
         "Brassière assortie (25€)",
@@ -372,7 +511,7 @@ const ProductPacks = () => {
     },
     {
       title: "COLLECTION FESTIVAL – BOHO VIBES",
-      image: "/files/packs/boho-festival.jpg",
+      image: "/files/picture12.jpg",
       items: [
         "Robe crochet/franges (40€)",
         "Lunettes teintées rétro (20€)",
@@ -389,7 +528,7 @@ const ProductPacks = () => {
     },
     {
       title: "COLLECTION CHILL – SUNDAY COMFY",
-      image: "/files/packs/sunday-comfy.jpg",
+      image: "/files/picture13.jpg",
       items: [
         "Jogging molletonné beige (30€)",
         "Sweat crop loose assorti (30€)",
@@ -405,7 +544,7 @@ const ProductPacks = () => {
     },
     {
       title: "COLLECTION DATE – FÉMININE & CHIC",
-      image: "/files/packs/date-chic.jpg",
+      image: "/files/picture11.jpg",
       items: [
         "Robe cache-cœur fluide (45€)",
         "Talons fins nude (40€)",
@@ -500,13 +639,14 @@ export default function Home() {
           style={{ scaleX }}
         />
       </motion.div>
-
       {/* Sections */}
       <HeroSection />
       <StrategySection />
-      <ProductGallery />
+      {/* Appel des trois sections séparées */}
+      <StreetwearSection />
+      <GlamourSection />
+      <GlowRoutineSection />
       <ProductPacks />
-
       {/* Footer */}
       <footer className="bg-gradient-to-b from-black via-black to-[#0f0c29] text-white px-6 py-20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
