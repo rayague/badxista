@@ -394,7 +394,7 @@ export default function GlowRoutinePage() {
       <IntroSection />
       <ComparaisonSection />
       <GlowRoutineProductsSection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

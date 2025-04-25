@@ -402,7 +402,7 @@ export default function GlamwearPage() {
       <IntroSection />
       <ComparaisonSection />
       <GlamwearProductsSection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

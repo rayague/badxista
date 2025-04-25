@@ -380,7 +380,7 @@ export default function StreetwearPage() {
       <IntroSection />
       <ComparaisonSection />
       <StreetwearProductsSection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
