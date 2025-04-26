@@ -83,7 +83,7 @@ const ComparaisonSection = () => {
       id: 1,
       name: "Highlighter Liquide Ultra Glow",
       price: "35 €",
-      image: "/files/picture_glow1.jpg",
+      image: "/files/picture11.jpg",
       link: "https://amzn.to/EXEMPLEGR1",
       description:
         "Formule concentrée pour un éclat immédiat et longue tenue, facile à appliquer avec embout precision.",
@@ -93,7 +93,7 @@ const ComparaisonSection = () => {
       id: 2,
       name: "Brume Corporelle Pailletée",
       price: "42 €",
-      image: "/files/picture_glow2.jpg",
+      image: "/files/picture12.jpg",
       link: "https://amzn.to/EXEMPLEGR2",
       description:
         "Mist parfumée subtile avec micro-paillettes dorées pour un effet scintillant et fragrance douce.",
@@ -107,7 +107,7 @@ const ComparaisonSection = () => {
       id: 3,
       name: "Parfum Sensuel Ambre & Vanille",
       price: "89 €",
-      image: "/files/picture_glow3.jpg",
+      image: "/files/picture13.jpg",
       link: "https://amzn.to/EXEMPLEGR3",
       description:
         "Équilibre parfait entre notes chaudes d’ambre et gourmandise de la vanille pour une aura irrésistible.",
@@ -193,7 +193,7 @@ const GlowRoutineProductsSection = () => {
       id: 4,
       name: "Kit Pré-Glow Intense",
       price: "59 €",
-      image: "/files/picture_glow4.jpg",
+      image: "/files/picture14.jpg",
       link: "https://amzn.to/EXEMPLEGR4",
       description:
         "Ensemble de 3 soins pour préparer la peau et maximiser l’éclat avant application du make-up.",
@@ -202,7 +202,7 @@ const GlowRoutineProductsSection = () => {
       id: 5,
       name: "Lotion Tonique Illuminatrice",
       price: "29 €",
-      image: "/files/picture_glow5.jpg",
+      image: "/files/picture15.jpg",
       link: "https://amzn.to/EXEMPLEGR5",
       description:
         "Rééquilibre le pH et apporte une luminosité naturelle dès la première utilisation.",
@@ -211,7 +211,7 @@ const GlowRoutineProductsSection = () => {
       id: 6,
       name: "Masque Peel-Off Pailleté",
       price: "24 €",
-      image: "/files/picture_glow6.jpg",
+      image: "/files/picture16.jpg",
       link: "https://amzn.to/EXEMPLEGR6",
       description:
         "Masque visage enrichi en micro-paillettes pour exfolier en douceur et révéler l’éclat.",
@@ -220,7 +220,7 @@ const GlowRoutineProductsSection = () => {
       id: 7,
       name: "Gommage Doux Éclat",
       price: "19 €",
-      image: "/files/picture_glow7.jpg",
+      image: "/files/picture17.jpg",
       link: "https://amzn.to/EXEMPLEGR7",
       description:
         "Exfoliant enzymatique qui élimine les cellules mortes sans agresser la peau.",
@@ -229,7 +229,7 @@ const GlowRoutineProductsSection = () => {
       id: 8,
       name: "Sérum Contour Lumière",
       price: "49 €",
-      image: "/files/picture_glow8.jpg",
+      image: "/files/picture18.jpg",
       link: "https://amzn.to/EXEMPLEGR8",
       description:
         "Sérum concentré en vitamine C et acide hyaluronique pour un teint unifié.",
@@ -238,7 +238,7 @@ const GlowRoutineProductsSection = () => {
       id: 9,
       name: "Brume Fixatrice Scintillante",
       price: "39 €",
-      image: "/files/picture_glow9.jpg",
+      image: "/files/picture19.jpg",
       link: "https://amzn.to/EXEMPLEGR9",
       description:
         "Fixe le maquillage tout en ajoutant un voile délicat de paillettes.",
@@ -247,7 +247,7 @@ const GlowRoutineProductsSection = () => {
       id: 10,
       name: "Roll-On Lumière Yeux",
       price: "25 €",
-      image: "/files/picture_glow10.jpg",
+      image: "/files/picture20.jpg",
       link: "https://amzn.to/EXEMPLEGR10",
       description:
         "Applicateur roll-on pour estomper cernes et apporter de l’éclat dans le regard.",
@@ -256,7 +256,7 @@ const GlowRoutineProductsSection = () => {
       id: 11,
       name: "Baume Lèvres Iridescent",
       price: "15 €",
-      image: "/files/picture_glow11.jpg",
+      image: "/files/picture21.jpg",
       link: "https://amzn.to/EXEMPLEGR11",
       description:
         "Baume nourrissant aux pigments irisés pour des lèvres gourmandes et brillantes.",

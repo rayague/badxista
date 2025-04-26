@@ -83,7 +83,7 @@ const ComparaisonSection = () => {
       id: 1,
       name: "Robe Moulante Strass",
       price: "129 €",
-      image: "/files/picture_glam1.jpg",
+      image: "/files/picture11.jpg",
       link: "https://amzn.to/EXEMPLEG1",
       description:
         "Robe ajustée ornée de strass, finition satinée pour un éclat maximal sous les projecteurs.",
@@ -97,7 +97,7 @@ const ComparaisonSection = () => {
       id: 2,
       name: "Talons Cristal",
       price: "159 €",
-      image: "/files/picture_glam2.jpg",
+      image: "/files/picture12.jpg",
       link: "https://amzn.to/EXEMPLEG2",
       description:
         "Escarpins à talons ornés de cristaux, hauteur 10 cm, semelle en cuir et bride cheville pour maintien optimal.",
@@ -201,7 +201,7 @@ const GlamwearProductsSection = () => {
       id: 4,
       name: "Boucles d’oreilles Chandelier",
       price: "39 €",
-      image: "/files/picture_glam4.jpg",
+      image: "/files/picture14.jpg",
       link: "https://amzn.to/EXEMPLEG4",
       description:
         "Boucles pendantes with strass, design élégant pour habiller votre décolleté.",
@@ -210,7 +210,7 @@ const GlamwearProductsSection = () => {
       id: 5,
       name: "Robe Mi-longue Satinée",
       price: "99 €",
-      image: "/files/picture_glam5.jpg",
+      image: "/files/picture15.jpg",
       link: "https://amzn.to/EXEMPLEG5",
       description:
         "Tissu satin fluide, coupe mi-longue, décolleté en V subtil et bretelles fines.",
@@ -219,7 +219,7 @@ const GlamwearProductsSection = () => {
       id: 6,
       name: "Bracelet Manchette",
       price: "49 €",
-      image: "/files/picture_glam6.jpg",
+      image: "/files/picture16.jpg",
       link: "https://amzn.to/EXEMPLEG6",
       description:
         "Large manchette en métal doré ornée de cristaux, parfait pour un poignet sophistiqué.",
@@ -228,7 +228,7 @@ const GlamwearProductsSection = () => {
       id: 7,
       name: "Sandales à Brides",
       price: "69 €",
-      image: "/files/picture_glam7.jpg",
+      image: "/files/picture17.jpg",
       link: "https://amzn.to/EXEMPLEG7",
       description:
         "Sandales à brides croisées, talon carré confortable, idéal pour danser toute la nuit.",
@@ -237,7 +237,7 @@ const GlamwearProductsSection = () => {
       id: 8,
       name: "Mini Robe Pailletée",
       price: "89 €",
-      image: "/files/picture_glam8.jpg",
+      image: "/files/picture18.jpg",
       link: "https://amzn.to/EXEMPLEG8",
       description:
         "Tissu pailleté bicolore, coupe courte, parfait pour les fêtes et occasions spéciales.",
@@ -246,7 +246,7 @@ const GlamwearProductsSection = () => {
       id: 9,
       name: "Pochette Frangée",
       price: "45 €",
-      image: "/files/picture_glam9.jpg",
+      image: "/files/picture19.jpg",
       link: "https://amzn.to/EXEMPLEG9",
       description:
         "Pochette suédine ornée de franges, chaîne amovible, style bohème chic revisité.",
@@ -255,7 +255,7 @@ const GlamwearProductsSection = () => {
       id: 10,
       name: "Collier Ras-du-cou",
       price: "29 €",
-      image: "/files/picture_glam10.jpg",
+      image: "/files/picture10.jpg",
       link: "https://amzn.to/EXEMPLEG10",
       description:
         "Ras-du-cou fin en métal argenté, orné de petits cristaux, discret et élégant.",
@@ -264,7 +264,7 @@ const GlamwearProductsSection = () => {
       id: 11,
       name: "Veste Blazer Pailletée",
       price: "119 €",
-      image: "/files/picture_glam11.jpg",
+      image: "/files/picture11.jpg",
       link: "https://amzn.to/EXEMPLEG11",
       description:
         "Blazer structuré, satin pailleté, parfait pour sublimer un pantalon ou une robe.",
