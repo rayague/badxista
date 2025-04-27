@@ -1,9 +1,7 @@
-# *
+
 User-agent: *
 Allow: /
 
-# Host
 Host: https://badxista.vercel.app
 
-# Sitemaps
 Sitemap: https://badxista.vercel.app/sitemap.xml
