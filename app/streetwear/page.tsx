@@ -19,7 +19,7 @@ const StreetwearPage = () => {
     items: [
       {
         name: "Levi's Everyday Sweat-Shirt Femme",
-        image: "/files/picture18.jpg",
+        image: "/files/streetwear/Levi'sEverydaySweat-ShirtFemme.jpg",
         link: "http://www.amazon.fr/dp/B0CP4D7PXD/ref=nosim?tag=ray2207-21",
         badge: "🔥 Tendance TikTok",
         description: "Le sweat Levi's qui cartonne sur TikTok - Qualité premium garantie",
@@ -31,7 +31,7 @@ const StreetwearPage = () => {
       },
       {
         name: "Sweat Patchwork Grand Col V - Oversize",
-        image: "/files/picture19.jpg",
+        image: "/files/streetwear/SweatPatchworkGrandColV-Oversize.jpg",
         link: "http://www.amazon.fr/dp/B0D5HG7J4B/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
         description: "Le sweat oversize préféré des influenceuses - Style vintage tendance",
@@ -43,7 +43,7 @@ const StreetwearPage = () => {
       },
       {
         name: "Chemise Ample Manche Chauve-Souris",
-        image: "/files/picture20.jpg",
+        image: "/files/streetwear/ChemiseAmpleMancheChauve-Souris.jpg",
         link: "http://www.amazon.fr/dp/B0DRL7HQK6/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Instagram",
         description: "La chemise la plus copiée de 2024 - Style unique et élégant",
@@ -55,7 +55,7 @@ const StreetwearPage = () => {
       },
       {
         name: "ONLY Jean à Jambe Large",
-        image: "/files/picture21.jpg",
+        image: "/files/streetwear/ONLYJeanàJambeLarge.jpg",
         link: "http://www.amazon.fr/dp/B0CND8PY4S/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
         description: "Le jean wide leg qui fait sensation - Taille haute tendance",
@@ -70,14 +70,14 @@ const StreetwearPage = () => {
       {
         name: "Sophie L.",
         title: "Influenceuse Mode • 250K Followers",
-        avatar: "/files/avatar1.jpg",
+        avatar: "/files/influencer1.jpg",
         content: "Ce style Streetwear est juste PARFAIT ! J'ai fait +50K likes sur ma dernière vidéo TikTok avec ces pièces. La qualité est au rendez-vous et le style est exactement ce que je cherchais.",
         date: "Acheté il y a 2 jours"
       },
       {
         name: "Emma M.",
         title: "Content Creator • 100K Followers",
-        avatar: "/files/avatar2.jpg",
+        avatar: "/files/influencer2.jpg",
         content: "La veste cargo est un vrai coup de cœur ! J'ai reçu tellement de compliments. Le service client est top, ils m'ont aidée à choisir la bonne taille.",
         date: "Acheté il y a 1 semaine"
       }
@@ -225,70 +225,70 @@ const StreetwearPage = () => {
             {[
               {
                 name: "Sweat à Capuche Avidlove",
-                image: "/files/picture18.jpg",
+                image: "/files/streetwear/SweatàCapucheAvidlove.jpg",
                 link: "http://www.amazon.fr/dp/B0CLDTD88T/ref=nosim?tag=ray2207-21",
                 badge: "🔥 Tendance",
                 description: "Sweat en résille avec capuche - Style unique"
               },
               {
                 name: "T-Shirt Graphique Casual",
-                image: "/files/picture19.jpg",
+                image: "/files/streetwear/T-ShirtGraphiqueCasual.jpg",
                 link: "http://www.amazon.fr/dp/DACONGMING/ref=nosim?tag=ray2207-21",
                 badge: "⭐ Populaire",
                 description: "T-shirt décontracté à manches longues"
               },
               {
                 name: "Sweat Capuche Col V",
-                image: "/files/picture20.jpg",
+                image: "/files/streetwear/SweatCapucheColV.jpg",
                 link: "http://www.amazon.fr/dp/B0CFV5SYQW/ref=nosim?tag=ray2207-21",
                 badge: "🛍️ Vu sur Insta",
                 description: "Sweat hoodie manche longue - Style urbain"
               },
               {
                 name: "Hoodie Femme Oversize",
-                image: "/files/picture21.jpg",
+                image: "/files/streetwear/HoodieFemmeOversize.jpg",
                 link: "http://www.amazon.fr/dp/B081RF9JVR/ref=nosim?tag=ray2207-21",
                 badge: "✨ Nouveau",
                 description: "Sweatshirt à capuche - Style streetwear"
               },
               {
                 name: "Sweat Capuche Super Doux",
-                image: "/files/picture18.jpg",
+                image: "/files/streetwear/SweatCapucheSuperDoux.jpg",
                 link: "http://www.amazon.fr/dp/B08QRHYD9T/ref=nosim?tag=ray2207-21",
                 badge: "🔥 Best Seller",
                 description: "Sweat à capuche portable et confortable"
               },
               {
                 name: "Sweat Patchwork Vintage",
-                image: "/files/picture19.jpg",
+                image: "/files/streetwear/SweatPatchworkVintage.jpg",
                 link: "http://www.amazon.fr/dp/B0D5HH7LT9/ref=nosim?tag=ray2207-21",
                 badge: "⭐ Tendance",
                 description: "Sweat oversize style vintage - Col roulé"
               },
               {
                 name: "Amazon Essentials Sweat",
-                image: "/files/picture20.jpg",
+                image: "/files/streetwear/AmazonEssentialsSweat.jpg",
                 link: "http://www.amazon.fr/dp/B07YLCNMH4/ref=nosim?tag=ray2207-21",
                 badge: "🛍️ Qualité",
                 description: "Sweat en polaire - Grandes tailles disponibles"
               },
               {
                 name: "Pull Décontracté Léger",
-                image: "/files/picture21.jpg",
+                image: "/files/streetwear/PullDécontractéLéger.jpg",
                 link: "http://www.amazon.fr/dp/B0D9TGK2T3/ref=nosim?tag=ray2207-21",
                 badge: "✨ Nouveau",
                 description: "Pull chic et léger - Style casual"
               },
               {
                 name: "Sweat Col V Casual",
-                image: "/files/picture18.jpg",
+                image: "/files/streetwear/SweatColVCasual.jpg",
                 link: "http://www.amazon.fr/dp/B0CCYDFX9F/ref=nosim?tag=ray2207-21",
                 badge: "🔥 Tendance",
                 description: "Sweatshirt col en V - Style décontracté"
               },
               {
                 name: "Sweat Sport avec Trous",
-                image: "/files/picture19.jpg",
+                image: "/files/streetwear/SweatSportavecTrous.jpg",
                 link: "http://www.amazon.fr/dp/B07MV68YL9/ref=nosim?tag=ray2207-21",
                 badge: "⭐ Sport",
                 description: "Sweat à capuche sportif - Style athlétique"

@@ -19,7 +19,7 @@ const GlowRoutinePage = () => {
     items: [
       {
         name: "Sérum Glow - TikTok Famous",
-        image: "/files/picture3.webp",
+        image: "/files/glowroutine/SérumGlow-TikTokFamous.jpg",
         link: "#",
         badge: "✨ Tendance TikTok",
         description: "Le sérum qui cartonne sur TikTok - +1M vues",
@@ -31,7 +31,7 @@ const GlowRoutinePage = () => {
       },
       {
         name: "Crème Hydratante - Glow Essential",
-        image: "/files/picture7.webp",
+        image: "/files/glowroutine/CrèmeHydratante-GlowEssential.jpg",
         link: "#",
         badge: "⭐ Best Seller",
         description: "La crème préférée des influenceuses",
@@ -43,7 +43,7 @@ const GlowRoutinePage = () => {
       },
       {
         name: "Masque Éclat - Glow Style",
-        image: "/files/picture15.jpg",
+        image: "/files/glowroutine/MasqueÉclat-GlowStyle.jpg",
         link: "#",
         badge: "🛍️ Vu sur Instagram",
         description: "Le masque le plus copié de 2024",
@@ -55,7 +55,7 @@ const GlowRoutinePage = () => {
       },
       {
         name: "Kit Glow Complet - Routine Vibes",
-        image: "/files/picture11.jpg",
+        image: "/files/glowroutine/KitGlowComplet-RoutineVibes.jpg",
         link: "#",
         badge: "✨ Nouveau",
         description: "Le kit qui fait sensation",
@@ -299,28 +299,28 @@ const GlowRoutinePage = () => {
               {[
                 {
                   name: "Bboninedress Robe de Soirée Cocktail",
-                  image: "/files/picture3.webp",
-                  link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
+                  image: "/files/glowroutine/BboninedressRobedeSoiréeCocktail.jpg",
+                  link: "http://www.amazon.fr/dp/B0BX6S7HC1/ref=nosim?tag=ray2207-21",
                   badge: "🔥 TikTok Viral",
                   description: "Robe Longue Asymétrique - Mariage & Cérémonie"
                 },
                 {
                   name: "Ever-Pretty Robe de Soirée Dos Nu",
-                  image: "/files/picture7.webp",
-                  link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
+                  image: "/files/glowroutine/Ever-PrettyRobedeSoiréeDosNu.jpg",
+                  link: "http://www.amazon.fr/dp/B0F1JWC1Z8/ref=nosim?tag=ray2207-21",
                   badge: "⭐ Best Seller",
                   description: "Robe Manches Volantées - Mousseline Élégante"
                 },
                 {
                   name: "Robe Cocktail Mariage Longue",
-                  image: "/files/picture15.jpg",
-                  link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
+                  image: "/files/glowroutine/RobeCocktailMariageLongue.jpg",
+                  link: "http://www.amazon.fr/dp/B0CDQ17LXB/ref=nosim?tag=ray2207-21",
                   badge: "🛍️ Vu sur Insta",
                   description: "Robe de Gala avec Traîne - Dos Nu Chic"
                 },
                 {
                   name: "Ever-Pretty Robe Mariage Invité",
-                  image: "/files/picture11.jpg",
+                  image: "/files/glowroutine/Ever-PrettyRobeMariageInvité.jpg",
                   link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
                   badge: "✨ Nouveau",
                   description: "Robe Longue Mousseline - Col V Plissé"
@@ -369,28 +369,28 @@ const GlowRoutinePage = () => {
               {[
                 {
                   name: "SEAUR Robe Moulante Bretelles",
-                  image: "/files/picture3.webp",
+                  image: "/files/glowroutine/SEAURRobeMoulanteBretelles.jpg",
                   link: "http://www.amazon.fr/dp/B0D5CMQ6SH/ref=nosim?tag=ray2207-21",
                   badge: "🔥 Tendance",
                   description: "Mini Robe à Bretelles - Dos Nu Clubwear"
                 },
                 {
                   name: "Robe en Cuir Sexy Clubwear",
-                  image: "/files/picture7.webp",
+                  image: "/files/glowroutine/RobeenCuirSexyClubwear.png",
                   link: "http://www.amazon.fr/dp/B0CLLYXBR6/ref=nosim?tag=ray2207-21",
                   badge: "⭐ Best Seller",
                   description: "Robe Wetlook - Dos Nu, Col V Moulante"
                 },
                 {
                   name: "Mini Robe Sexy Transparente",
-                  image: "/files/picture15.jpg",
+                  image: "/files/glowroutine/MiniRobeSexyTransparente.jpg",
                   link: "http://www.amazon.fr/dp/B0D8J4MP5V/ref=nosim?tag=ray2207-21",
                   badge: "🛍️ Vu sur Insta",
                   description: "Robe Clubbing - Dos Nu Cocktail Soirée"
                 },
                 {
                   name: "Robe Moulante Manches Longues",
-                  image: "/files/picture11.jpg",
+                  image: "/files/glowroutine/RobeMoulanteManchesLongues.jpg",
                   link: "http://www.amazon.fr/dp/B0DJSNQ4FS/ref=nosim?tag=ray2207-21",
                   badge: "✨ Nouveau",
                   description: "Mini Robe de Soirée - Épaules Dénudées"
@@ -439,28 +439,28 @@ const GlowRoutinePage = () => {
               {[
                 {
                   name: "Body Femme Manches Longues",
-                  image: "/files/picture3.webp",
+                  image: "/files/glowroutine/BodyFemmeManchesLongues.jpg",
                   link: "http://www.amazon.fr/dp/B0DX1WN5TZ/ref=nosim?tag=ray2207-21",
                   badge: "🔥 Tendance",
                   description: "Bodysuit à Col Haut - Combinaison Slim"
                 },
                 {
                   name: "Combinaison Pantalon Linen",
-                  image: "/files/picture7.webp",
+                  image: "/files/glowroutine/CombinaisonPantalonLinen.jpg",
                   link: "http://www.amazon.fr/dp/B0F3CNPKGY/ref=nosim?tag=ray2207-21",
                   badge: "⭐ Bohème",
                   description: "Salopette Imprimé Bohème - Style Plage"
                 },
                 {
                   name: "Y2K Body Léopard",
-                  image: "/files/picture15.jpg",
+                  image: "/files/glowroutine/Y2KBodyLéopard.jpg",
                   link: "http://www.amazon.fr/dp/B0DNQB2PS2/ref=nosim?tag=ray2207-21",
                   badge: "🛍️ Vu sur Insta",
                   description: "Body pour Fête & Festival - Style Y2K"
                 },
                 {
                   name: "Avidlove Bodys Dentelle",
-                  image: "/files/picture11.jpg",
+                  image: "/files/glowroutine/AvidloveBodysDentelle.jpg",
                   link: "http://www.amazon.fr/dp/B0DJNHKDJV/ref=nosim?tag=ray2207-21",
                   badge: "✨ Sexy",
                   description: "Lingerie Dos Nu - Décolleté en V"

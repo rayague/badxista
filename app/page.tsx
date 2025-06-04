@@ -369,7 +369,7 @@ const StreetwearSection = () => {
     items: [
       {
         name: "Bboninedress Robe de Soirée Cocktail",
-        image: "/files/picture14.jpg",
+        image: "/files/glowroutine/BboninedressRobedeSoiréeCocktail.jpg",
         link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
         badge: "🔥 TikTok Viral",
         description: "Robe Longue Asymétrique - Mariage & Cérémonie"

@@ -19,7 +19,7 @@ const GlamwearPage = () => {
     items: [
       {
         name: "Robe de Soirée Dos Nu Strass",
-        image: "/files/picture14.jpg",
+        image: "/files/glamwear/RobedeSoiréeDosNuStrass.jpg",
         link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
         badge: "🔥 TikTok Viral",
         description: "Robe Longue avec Strass - Événement Premium",
@@ -31,7 +31,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe de Gala Traîne Cristal",
-        image: "/files/picture7.webp",
+        image: "/files/glamwear/RobedeGalaTraîneCristal.jpg",
         link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
         description: "Robe de Soirée avec Traîne - Style Hollywood",
@@ -43,7 +43,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe Cocktail Plissée Paillettes",
-        image: "/files/picture15.jpg",
+        image: "/files/glamwear/RobeCocktailPlisséePaillettes.jpg",
         link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Insta",
         description: "Robe Courte Paillettes - Soirée VIP",
@@ -55,7 +55,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe de Soirée Mousseline Élégante",
-        image: "/files/picture11.jpg",
+        image: "/files/glamwear/RobedeSoiréeMousselineÉlégante.jpg",
         link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
         description: "Robe Longue Mousseline - Style Red Carpet",
@@ -67,7 +67,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Ever-Pretty Robe de Soirée en Double V-col",
-        image: "/files/picture14.jpg",
+        image: "/files/glamwear/Ever-PrettyRobedeSoiréeenDoubleV-col.jpg",
         link: "http://www.amazon.fr/dp/B07GKSDM7K/ref=nosim?tag=ray2207-21",
         badge: "🔥 Tendance",
         description: "Robe de soirée élégante, double V, manches courtes",
@@ -79,7 +79,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Ever-Pretty Robe de Témoin de Mariage Longue",
-        image: "/files/picture7.webp",
+        image: "/files/glamwear/Ever-PrettyRobedeTémoindeMariageLongue.jpg",
         link: "http://www.amazon.fr/dp/B0DQL413C8/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
         description: "Robe longue appliqué col V, manches courtes, chic",
@@ -91,7 +91,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Berylove Robe de soirée Officielle",
-        image: "/files/picture15.jpg",
+        image: "/files/glamwear/BeryloveRobedesoiréeOfficielle.jpg",
         link: "http://www.amazon.fr/dp/B08KW3J56X/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Insta",
         description: "Robe de mariage à manches courtes à volants",
@@ -103,7 +103,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Ever-Pretty Robe de Soirée Longue Femme avec Ruchés",
-        image: "/files/picture11.jpg",
+        image: "/files/glamwear/Ever-PrettyRobedeSoiréeLongueFemmeavecRuchés.jpg",
         link: "http://www.amazon.fr/dp/B08LD9GPCY/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
         description: "Robe longue, mousseline de soie, classique",
@@ -115,8 +115,8 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe de Soirée Dos Nu Paillettes",
-        image: "/files/picture14.jpg",
-        link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
+        image: "/files/glamwear/RobedeSoiréeDosNuPaillettes2.jpg",
+        link: "http://www.amazon.fr/dp/B0DZ68229D/ref=nosim?tag=ray2207-21",
         badge: "🔥 TikTok Viral",
         description: "Robe Longue avec Paillettes - Soirée Élégante",
         stats: {
@@ -127,7 +127,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe de Gala Manches Volantées",
-        image: "/files/picture7.webp",
+        image: "/files/glamwear/RobedeGalaManchesVolantées.jpg",
         link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
         description: "Robe de Soirée avec Volants - Style Princesse",
@@ -139,7 +139,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe Cocktail Dos Nu Transparent",
-        image: "/files/picture15.jpg",
+        image: "/files/glamwear/RobeCocktailDosNuTransparent.jpg",
         link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Insta",
         description: "Robe Courte Dos Nu - Soirée Sensuelle",
@@ -151,7 +151,7 @@ const GlamwearPage = () => {
       },
       {
         name: "Robe de Soirée Col V Plissé",
-        image: "/files/picture11.jpg",
+        image: "/files/glamwear/RobedeSoiréeColVPlissé2.jpg",
         link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
         description: "Robe Longue Plissée - Style Élégant",
