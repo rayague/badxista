@@ -20,7 +20,7 @@ const GlowRoutinePage = () => {
       {
         name: "Sérum Glow - TikTok Famous",
         image: "/files/glowroutine/SérumGlow-TikTokFamous.jpg",
-        link: "#",
+        link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
         badge: "✨ Tendance TikTok",
         description: "Le sérum qui cartonne sur TikTok - +1M vues",
         stats: {
@@ -32,7 +32,7 @@ const GlowRoutinePage = () => {
       {
         name: "Crème Hydratante - Glow Essential",
         image: "/files/glowroutine/CrèmeHydratante-GlowEssential.jpg",
-        link: "#",
+        link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
         description: "La crème préférée des influenceuses",
         stats: {
@@ -44,7 +44,7 @@ const GlowRoutinePage = () => {
       {
         name: "Masque Éclat - Glow Style",
         image: "/files/glowroutine/MasqueÉclat-GlowStyle.jpg",
-        link: "#",
+        link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Instagram",
         description: "Le masque le plus copié de 2024",
         stats: {
@@ -56,7 +56,7 @@ const GlowRoutinePage = () => {
       {
         name: "Kit Glow Complet - Routine Vibes",
         image: "/files/glowroutine/KitGlowComplet-RoutineVibes.jpg",
-        link: "#",
+        link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
         description: "Le kit qui fait sensation",
         stats: {

@@ -190,19 +190,22 @@ const HeroSection = () => {
             >
               {[
                 {
-                  name: "Streetwear",
+                  name: "Streetwear Urbain",
                   icon: Flame,
-                  description: "🔥 Collection TikTok VIRALE"
+                  description: "🔥 Collection TikTok VIRALE",
+                  image: "/files/picture18.jpg"
                 },
                 {
-                  name: "Glamwear",
+                  name: "Glamour Nocturne",
                   icon: Sparkles,
-                  description: "✨ Looks Instagram TRENDING"
+                  description: "✨ Looks Instagram TRENDING",
+                  image: "/files/picture14.jpg"
                 },
                 {
-                  name: "Glow Routine",
+                  name: "Glow Routine & Parfums",
                   icon: Users,
-                  description: "🌟 Beauté VALIDÉE par +20K"
+                  description: "🌟 Beauté VALIDÉE par +20K",
+                  image: "/files/picture29.jpg"
                 }
               ].map((item, i) => (
                 <Link
@@ -212,11 +215,19 @@ const HeroSection = () => {
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="group px-6 py-4 bg-white/10 backdrop-blur-sm rounded-xl text-white border border-white/20 hover:bg-white/20 transition-all cursor-pointer"
+                    className="group relative px-6 py-4 bg-white/10 backdrop-blur-sm rounded-xl text-white border border-white/20 hover:bg-white/20 transition-all cursor-pointer overflow-hidden"
                     role="button"
                     tabIndex={0}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="absolute inset-0 z-0">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover opacity-20 group-hover:opacity-30 transition-opacity"
+                      />
+                    </div>
+                    <div className="relative z-10 flex items-center gap-3">
                       <item.icon className="w-5 h-5 text-pink-400" />
                       <div className="text-left">
                         <div className="font-semibold">{item.name}</div>
@@ -368,32 +379,32 @@ const StreetwearSection = () => {
     description: "🔥 Collection TikTok VIRALE - Les looks Bad Girl les plus demandés de 2024. Sélection validée par +10K influenceuses.",
     items: [
       {
-        name: "Bboninedress Robe de Soirée Cocktail",
-        image: "/files/glowroutine/BboninedressRobedeSoiréeCocktail.jpg",
+        name: "Levi's Everyday Sweat-Shirt Femme",
+        image: "/files/streetwear/Levi'sEverydaySweat-ShirtFemme.jpg",
         link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
         badge: "🔥 TikTok Viral",
-        description: "Robe Longue Asymétrique - Mariage & Cérémonie"
+        description: "Sweat-Shirt Casual - Style Urbain"
       },
       {
-        name: "Ever-Pretty Robe de Soirée Dos Nu",
-        image: "/files/picture7.webp",
-        link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
+        name: "Nike Sportswear Club Fleece",
+        image: "/files/streetwear/NikeSportswearClubFleece.jpg",
+        link: "http://www.amazon.fr/dp/B08THNKYWW/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
-        description: "Robe Manches Volantées - Mousseline Élégante"
+        description: "Hoodie Nike - Style Streetwear"
       },
       {
-        name: "Robe Cocktail Mariage Longue",
-        image: "/files/picture15.jpg",
-        link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
+        name: "Amazon Essentials Pull Col en v",
+        image: "/files/streetwear/AmazonEssentialsPullColenv.jpg",
+        link: "http://www.amazon.fr/dp/B079RDYBPX/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Insta",
-        description: "Robe de Gala avec Traîne - Dos Nu Chic"
+        description: "Veste de Sport - Style Urbain"
       },
       {
-        name: "Ever-Pretty Robe Mariage Invité",
-        image: "/files/picture11.jpg",
+        name: "Amazon Essentials Pull Col Rond Léger",
+        image: "/files/streetwear/AmazonEssentialsPullColRondLéger.jpg",
         link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
-        description: "Robe Longue Mousseline - Col V Plissé"
+        description: "Sneakers Puma - Style Streetwear"
       }
     ],
   };
@@ -474,29 +485,29 @@ const GlamourSection = () => {
     description: "✨ Collection GLAM VIRALE - Les looks de soirée les plus demandés sur Instagram & TikTok. Sélection validée par +25K influenceuses.",
     items: [
       {
-        name: "Robe de Soirée Dos Nu Strass",
-        image: "/files/picture14.jpg",
+        name: "BKEPDY Femme Robe de soiré Sexy Profonde Col en V",
+        image: "/files/pack/BKEPDYFemmeRobedesoiréSexyProfondeColenVWrapMini.jpg",
         link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
         badge: "🔥 TikTok Viral",
         description: "Robe Longue avec Strass - Événement Premium"
       },
       {
-        name: "Robe de Gala Traîne Cristal",
-        image: "/files/picture7.webp",
+        name: "Avidlove Robe Courte En Dentelle Pour Femme",
+        image: "/files/pack/AvidloveRobeCourteEnDentellePourFemme.jpg",
         link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
         badge: "⭐ Best Seller",
         description: "Robe de Soirée avec Traîne - Style Hollywood"
       },
       {
         name: "Robe Cocktail Plissée Paillettes",
-        image: "/files/picture15.jpg",
+        image: "/files/glamwear/RobeCocktailPlisséePaillettes.jpg",
         link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Insta",
         description: "Robe Courte Paillettes - Soirée VIP"
       },
       {
         name: "Robe de Soirée Mousseline Élégante",
-        image: "/files/picture11.jpg",
+        image: "/files/glamwear/RobedeSoiréeMousselineÉlégante.jpg",
         link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
         badge: "✨ Nouveau",
         description: "Robe Longue Mousseline - Style Red Carpet"
@@ -580,32 +591,32 @@ const GlowRoutineSection = () => {
     description: "🌟 Collection BEAUTÉ VIRALE - Les produits de beauté les plus demandés sur TikTok. Sélection validée par +20K influenceuses.",
     items: [
       {
-        name: "Body Femme Manches Longues",
-        image: "/files/picture3.webp",
+        name: "Sérum Glow - TikTok Famous",
+        image: "/files/glowroutine/SérumGlow-TikTokFamous.jpg",
         link: "http://www.amazon.fr/dp/B0DX1WN5TZ/ref=nosim?tag=ray2207-21",
         badge: "🔥 Tendance",
-        description: "Bodysuit à Col Haut - Combinaison Slim"
+        description: "Sérum Hydratant - Effet Glow"
       },
       {
-        name: "Combinaison Pantalon Linen",
-        image: "/files/picture7.webp",
+        name: "Crème Hydratante - Glow Essential",
+        image: "/files/glowroutine/CrèmeHydratante-GlowEssential.jpg",
         link: "http://www.amazon.fr/dp/B0F3CNPKGY/ref=nosim?tag=ray2207-21",
-        badge: "⭐ Bohème",
-        description: "Salopette Imprimé Bohème - Style Plage"
+        badge: "⭐ Best Seller",
+        description: "Crème de Jour - Hydratation Intense"
       },
       {
-        name: "Y2K Body Léopard",
-        image: "/files/picture15.jpg",
+        name: "Masque Éclat - Glow Style",
+        image: "/files/glowroutine/MasqueÉclat-GlowStyle.jpg",
         link: "http://www.amazon.fr/dp/B0DNQB2PS2/ref=nosim?tag=ray2207-21",
         badge: "🛍️ Vu sur Insta",
-        description: "Body pour Fête & Festival - Style Y2K"
+        description: "Masque Visage - Éclat Immédiat"
       },
       {
-        name: "Avidlove Bodys Dentelle",
-        image: "/files/picture11.jpg",
+        name: "Kit Glow Complet - Routine Vibes",
+        image: "/files/glowroutine/KitGlowComplet-RoutineVibes.jpg",
         link: "http://www.amazon.fr/dp/B0DJNHKDJV/ref=nosim?tag=ray2207-21",
-        badge: "✨ Sexy",
-        description: "Lingerie Dos Nu - Décolleté en V"
+        badge: "✨ Nouveau",
+        description: "Kit Complet - Routine Beauté"
       }
     ],
   };
@@ -734,18 +745,18 @@ const ProductPacks = (): React.ReactElement => {
 
   const packs: Pack[] = [
     {
-      title: "COLLECTION SOIRÉE – DIVA GLAMOUR",
-      image: "/files/picture14.jpg",
+      title: "PACK STREETWEAR URBAN",
+      image: "/files/streetwear/Levi'sEverydaySweat-ShirtFemme.jpg",
       items: [
-        "Bboninedress Robe de Soirée Cocktail - TikTok Viral",
-        "Ever-Pretty Robe de Soirée Dos Nu - Best Seller",
-        "Robe Cocktail Mariage Longue - Vu sur Insta",
-        "Ever-Pretty Robe Mariage Invité - Nouveau",
+        "Levi's Everyday Sweat-Shirt Femme - TikTok Viral",
+        "Nike Sportswear Club Fleece - Best Seller",
+        "Adidas Tiro Track Jacket - Vu sur Insta",
+        "Puma RS-X³ Puzzle - Nouveau",
       ],
-      link: "https://www.amazon.fr/hz/wishlist/ls/1DAYPACKEXEMPLE?tag=tonaffid",
-      description: "✨ Collection VIRALE Instagram - Les robes de soirée les plus demandées. Sélection validée par +20K influenceuses.",
-      buttonText: "Découvrir la Collection",
-      badge: "✨ Tendance Instagram",
+      link: "http://www.amazon.fr/dp/B0C4NLC4SR/ref=nosim?tag=ray2207-21",
+      description: "🔥 Collection STREETWEAR VIRALE - Les pièces les plus demandées sur TikTok. Sélection validée par +20K influenceuses.",
+      buttonText: "Découvrir le Pack",
+      badge: "🔥 Tendance Streetwear",
       socialProof: "⭐ +800 commandes ce mois-ci",
       stats: {
         views: "3.5M+",
@@ -759,18 +770,18 @@ const ProductPacks = (): React.ReactElement => {
       ]
     },
     {
-      title: "COLLECTION CLUBBING – SEXY VIBES",
-      image: "/files/picture15.jpg",
+      title: "PACK GLAMOUR NOCTURNE",
+      image: "/files/pack/PACKGLAMOURNOCTURNE.jpg",
       items: [
-        "SEAUR Robe Moulante Bretelles - Tendance",
-        "Robe en Cuir Sexy Clubwear - Best Seller",
-        "Mini Robe Sexy Transparente - Vu sur Insta",
-        "Robe Moulante Manches Longues - Nouveau",
+        "Robe de Soirée Dos Nu Strass - TikTok Viral",
+        "Robe de Gala Traîne Cristal - Best Seller",
+        "Robe Cocktail Plissée Paillettes - Vu sur Insta",
+        "Robe de Soirée Mousseline Élégante - Nouveau",
       ],
-      link: "https://www.amazon.fr/hz/wishlist/ls/1NIGHTPACKEXEMPLE?tag=tonaffid",
-      description: "🔥 Collection CLUB VIRALE - Les looks de soirée les plus demandés. Sélection validée par +25K influenceuses.",
-      buttonText: "Voir la Collection",
-      badge: "🔥 Tendance Club",
+      link: "http://www.amazon.fr/dp/B0DWFH88PM/ref=nosim?tag=ray2207-21",
+      description: "✨ Collection GLAM VIRALE - Les robes de soirée les plus demandées. Sélection validée par +25K influenceuses.",
+      buttonText: "Voir le Pack",
+      badge: "✨ Tendance Glamour",
       socialProof: "⭐ +600 commandes ce mois-ci",
       stats: {
         views: "2.8M+",
@@ -784,18 +795,18 @@ const ProductPacks = (): React.ReactElement => {
       ]
     },
     {
-      title: "COLLECTION BODY – Y2K VIBES",
-      image: "/files/picture12.jpg",
+      title: "PACK GLOW ROUTINE",
+      image: "/files/glowroutine/SérumGlow-TikTokFamous.jpg",
       items: [
-        "Body Femme Manches Longues - Tendance",
-        "Combinaison Pantalon Linen - Bohème",
-        "Y2K Body Léopard - Vu sur Insta",
-        "Avidlove Bodys Dentelle - Sexy",
+        "Sérum Glow - TikTok Famous - Tendance",
+        "Crème Hydratante - Glow Essential - Best Seller",
+        "Masque Éclat - Glow Style - Vu sur Insta",
+        "Kit Glow Complet - Routine Vibes - Nouveau",
       ],
-      link: "https://www.amazon.fr/hz/wishlist/ls/1BOHOPACKEXEMPLE?tag=tonaffid",
-      description: "🌟 Collection Y2K VIRALE - Les bodys les plus demandés. Sélection validée par +18K influenceuses.",
-      buttonText: "Voir la Collection",
-      badge: "🌟 Tendance Y2K",
+      link: "http://www.amazon.fr/dp/B0BNJ1ZVPY/ref=nosim?tag=ray2207-21",
+      description: "🌟 Collection BEAUTÉ VIRALE - Les produits de beauté les plus demandés. Sélection validée par +18K influenceuses.",
+      buttonText: "Voir le Pack",
+      badge: "🌟 Tendance Beauté",
       socialProof: "⭐ +500 commandes ce mois-ci",
       stats: {
         views: "2.2M+",
@@ -805,21 +816,21 @@ const ProductPacks = (): React.ReactElement => {
       features: [
         "Livraison Express 24h",
         "Retour Gratuit 30 jours",
-        "Guide Style Inclus"
+        "Guide Routine Inclus"
       ]
     },
     {
-      title: "COLLECTION MARIAGE – ÉLÉGANCE",
-      image: "/files/picture13.jpg",
+      title: "PACK MARIAGE ÉLÉGANCE",
+      image: "/files/pack/PACKMARIAGEÉLÉGANCE.jpg",
       items: [
-        "Bboninedress Robe de Soirée Cocktail - Mariage",
-        "Ever-Pretty Robe de Soirée Dos Nu - Cérémonie",
-        "Robe Cocktail Mariage Longue - Gala",
-        "Ever-Pretty Robe Mariage Invité - Élégante",
+        "Robe de Soirée Dos Nu Strass - Mariage",
+        "Robe de Gala Traîne Cristal - Cérémonie",
+        "Robe Cocktail Plissée Paillettes - Gala",
+        "Robe de Soirée Mousseline Élégante - Élégante",
       ],
-      link: "https://www.amazon.fr/hz/wishlist/ls/1CHILLPACKEXEMPLE?tag=tonaffid",
+      link: "http://www.amazon.fr/dp/B0BL7FC5VQ/ref=nosim?tag=ray2207-21",
       description: "💝 Collection MARIAGE VIRALE - Les robes de cérémonie les plus demandées. Sélection validée par +22K influenceuses.",
-      buttonText: "Voir la Collection",
+      buttonText: "Voir le Pack",
       badge: "💝 Tendance Mariage",
       socialProof: "⭐ +700 commandes ce mois-ci",
       stats: {
@@ -834,17 +845,17 @@ const ProductPacks = (): React.ReactElement => {
       ]
     },
     {
-      title: "COLLECTION FESTIVAL – BOHO CHIC",
-      image: "/files/picture11.jpg",
+      title: "PACK FESTIVAL BOHO",
+      image: "/files/pack/PACKFESTIVALBOHO.jpg",
       items: [
-        "Combinaison Pantalon Linen - Bohème",
-        "Y2K Body Léopard - Festival",
-        "Robe en Cuir Sexy Clubwear - Tendance",
-        "Mini Robe Sexy Transparente - Nouveau",
+        "Nike Sportswear Club Fleece - Bohème",
+        "Adidas Tiro Track Jacket - Festival",
+        "Puma RS-X³ Puzzle - Tendance",
+        "Levi's Everyday Sweat-Shirt - Nouveau",
       ],
-      link: "https://www.amazon.fr/hz/wishlist/ls/1DATEPACKEXEMPLE?tag=tonaffid",
+      link: "http://www.amazon.fr/dp/B0DX1WN5TZ/ref=nosim?tag=ray2207-21",
       description: "🌟 Collection FESTIVAL VIRALE - Les looks bohème les plus demandés. Sélection validée par +15K influenceuses.",
-      buttonText: "Voir la Collection",
+      buttonText: "Voir le Pack",
       badge: "🌟 Tendance Festival",
       socialProof: "⭐ +400 commandes ce mois-ci",
       stats: {
@@ -859,17 +870,17 @@ const ProductPacks = (): React.ReactElement => {
       ]
     },
     {
-      title: "COLLECTION DATE – SÉDUCTION",
-      image: "/files/picture16.jpg",
+      title: "PACK DATE NIGHT",
+      image: "/files/pack/PACKDATENIGHT.jpg",
       items: [
-        "SEAUR Robe Moulante Bretelles - Date Night",
-        "Robe en Cuir Sexy Clubwear - Best Seller",
-        "Mini Robe Sexy Transparente - Viral",
-        "Robe Moulante Manches Longues - Tendance",
+        "Robe de Soirée Dos Nu Strass - Date Night",
+        "Robe de Gala Traîne Cristal - Best Seller",
+        "Robe Cocktail Plissée Paillettes - Viral",
+        "Robe de Soirée Mousseline Élégante - Tendance",
       ],
-      link: "https://www.amazon.fr/hz/wishlist/ls/1DATEPACKEXEMPLE?tag=tonaffid",
+      link: "http://www.amazon.fr/dp/B0F3CNPKGY/ref=nosim?tag=ray2207-21",
       description: "💝 Collection DATE VIRALE - Les looks de séduction les plus demandés. Sélection validée par +28K influenceuses.",
-      buttonText: "Voir la Collection",
+      buttonText: "Voir le Pack",
       badge: "💝 Tendance Date",
       socialProof: "⭐ +900 commandes ce mois-ci",
       stats: {
