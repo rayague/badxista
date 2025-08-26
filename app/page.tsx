@@ -191,25 +191,28 @@ const HeroSection = () => {
               {[
                 {
                   name: "Streetwear Urbain",
+                  link: "streetwear",
                   icon: Flame,
                   description: "🔥 Collection TikTok VIRALE",
                   image: "/files/picture18.jpg"
                 },
                 {
                   name: "Glamour Nocturne",
+                  link: "glamwear",
                   icon: Sparkles,
                   description: "✨ Looks Instagram TRENDING",
                   image: "/files/picture14.jpg"
                 },
                 {
                   name: "Glow Routine & Parfums",
+                  link: "glow-routine",
                   icon: Users,
                   description: "🌟 Beauté VALIDÉE par +20K",
                   image: "/files/picture29.jpg"
                 }
               ].map((item, i) => (
                 <Link
-                  href={`/${item.name.toLowerCase().replace(/ /g, "-")}`}
+                  href={`/${item.link.toLowerCase().replace(/ /g, "-")}`}
                   key={i}
                   passHref
                 >
